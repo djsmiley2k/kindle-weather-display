@@ -2,9 +2,17 @@
 
 cd "$(dirname "$0")"
 
+
+if [ ! -d pngcrush-1.7.67 ] 
+then
+  echo "Seem to be missing pngcrush-1.7.67 in "$(pwd)
+  exit 1
+fi
+
+
 date
 
-echo "------ python get script"
+echo "------ python get data from metoffice"
 python new-weather-script.py
 
 echo "------ convert to png"
