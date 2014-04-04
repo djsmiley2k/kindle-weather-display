@@ -5,7 +5,7 @@
 # September 2012
 #
 # Owen Bullock - UK Weather - MetOffice - Aug 2013
-#
+# Apr 2014 - amended for Wind option
 #
 
 import urllib2
@@ -15,17 +15,25 @@ import codecs
 
 
 #
-# MetOffice API Key
+# MetOffice API Key - unique to me. Todo - put into file
 #
 myApiKey="7557844e-c57a-4fc6-90d0-055fcce3018c"
 
 
+#
+#  temps_display=true:  kindle displays 'High' temp + 'Feels Like' temp 
+#               false:  kindle displays 'Feels Like' + Wind
+#
+temps_display=0
 
 
 #
-#  magic Svg template
+#  magic Svg template 
 #
-template = 'weather-script-preprocess_temps.svg'
+if temps_display :
+   template = 'weather-script-preprocess_temps.svg'
+else:
+   template = 'weather-script-preprocess_wind.svg'
 
 #
 #  Map the MetOffice weather codes to Icons. 
@@ -65,6 +73,34 @@ mapping = [
 [30, 'tsra    '],  #  Thunder                         tsra.svg
 ]
 
+#
+# Wind - I'm mapping to one of 8 direction icons. Will do the 
+# full 16 at some point...
+#
+wind_mapping = {
+'N'  : '8',
+'NNE': '8',
+'NE' : '14',
+'ENE': '14',
+'E'  : '12',
+'ESE': '12',
+'SE' : '10',
+'SSE': '10',
+'S'  : '0',
+'SSW': '0',
+'SW' : '6',
+'WSW': '6',
+'W'  : '4',
+'WNW': '4',
+'NW' : '2',
+'NNW': '2',
+}
+
+# 
+# minimum mph value for each number on the bft scale 0-12
+#
+beaufort_scale = [ 0, 1, 4, 8, 13, 18, 25, 31, 39, 47, 55, 64, 74 ]
+
 
 
 #
@@ -86,13 +122,35 @@ print "DAY:",today_dt
 dtnow=datetime.datetime.now().strftime("%d-%b %H:%M")
 print "NOW:",dtnow
 
+
+# # #  This is the xml format from the met Office
+# # #  - One <period> for each day of the forecast. Within it theres a line for Day and one for Night
+# # #
+#<DV dataDate="2014-04-03T11:00:00Z" type="Forecast">
+#  <Location i="352448" lat="51.6555" lon="0.0698" name="LOUGHTON" country="ENGLAND" continent="EUROPE" elevation="52.0">
+#    <Period type="Day" value="2014-04-03Z">
+#      <Rep D="ESE" Gn="18" Hn="71" PPd="8" S="11" V="MO" Dm="17" FDm="15" W="7" U="2">Day</Rep>
+#      <Rep D="SSW" Gm="16" Hm="89" PPn="11" S="7" V="MO" Nm="10" FNm="9" W="8">Night</Rep>
+#    </Period>
+#    <Period type="Day" value="2014-04-04Z">
+#      <Rep D="WSW" Gn="18" Hn="58" PPd="5" S="9" V="GO" Dm="15" FDm="13" W="7" U="3">Day</Rep>
+#      <Rep D="SW" Gm="11" Hm="87" PPn="5" S="7" V="GO" Nm="6" FNm="6" W="2">Night</Rep>
+#    </Period>
+
+
+
 # get temps:  Dm is Day Max, FDm is Feels Like Day Max
 # get weather: W is weather type
+# get wind:    D is wind dir, S is Speed, Gn is Gust at Noon
+
+
 highs = [None]*7
 feels = [None]*7
-icons =  [None]*7
-i=0;
+icons     =  [None]*7
+wind_icon =  [None]*7 
+speed_bft =  [None]*7 
 
+i=0
 for period in periods:
     thisDay=period.getAttribute('value')
     print "period:",i
@@ -107,7 +165,17 @@ for period in periods:
     icons[i] = mapping[weather][1];
     icons[i] = icons[i].rstrip(' ')
     print "      Weather :",weather,icons[i]+'.svg'
-      # and loop
+       # wind speed. Ignoring Gust for now
+    dir       =     Reps[0].getAttribute('D') 
+    speed_mph = int(Reps[0].getAttribute('S'))
+    wind_icon[i] = "wind"+wind_mapping[dir]
+
+    for speed_bft[i], min_mph in enumerate(beaufort_scale):
+       if speed_mph <= min_mph:
+          break;
+    print "      Wind    :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]
+     
+     # and loop
     i=i+1
      
 
@@ -130,10 +198,22 @@ output = output.replace('ICON_TWO',icons[1])
 output = output.replace('ICON_THREE',icons[2])
 output = output.replace('ICON_FOUR',icons[3])
 
-output = output.replace('HIGH_ONE',str(highs[0]))
-output = output.replace('HIGH_TWO',str(highs[1]))
-output = output.replace('HIGH_THREE',str(highs[2]))
-output = output.replace('HIGH_FOUR',str(highs[3]))
+if temps_display:
+   output = output.replace('HIGH_ONE',str(highs[0]))
+   output = output.replace('HIGH_TWO',str(highs[1]))
+   output = output.replace('HIGH_THREE',str(highs[2]))
+   output = output.replace('HIGH_FOUR',str(highs[3]))
+else:
+   output = output.replace('WIND_ONE', "wind12") #wind_icon[0])  
+   output = output.replace('WIND_TWO',wind_icon[1])  
+   output = output.replace('WIND_THREE',wind_icon[2])  
+   output = output.replace('WIND_FOUR',wind_icon[3])  
+   output = output.replace('BFT_ONE',  str(speed_bft[0]))
+   output = output.replace('BFT_TWO',  str(speed_bft[1]))
+   output = output.replace('BFT_THREE',str(speed_bft[2]))
+   output = output.replace('BFT_FOUR', str(speed_bft[3]))
+
+   
 
 output = output.replace('LOW_ONE',str(feels[0]))
 output = output.replace('LOW_TWO',str(feels[1]))
