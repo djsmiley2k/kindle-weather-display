@@ -204,10 +204,10 @@ if temps_display:
    output = output.replace('HIGH_THREE',str(highs[2]))
    output = output.replace('HIGH_FOUR',str(highs[3]))
 else:
-   output = output.replace('WIND_ONE', "wind12") #wind_icon[0])  
-   output = output.replace('WIND_TWO',wind_icon[1])  
+   output = output.replace('WIND_ONE'  ,wind_icon[0])  
+   output = output.replace('WIND_TWO'  ,wind_icon[1])  
    output = output.replace('WIND_THREE',wind_icon[2])  
-   output = output.replace('WIND_FOUR',wind_icon[3])  
+   output = output.replace('WIND_FOUR' ,wind_icon[3])  
    output = output.replace('BFT_ONE',  str(speed_bft[0]))
    output = output.replace('BFT_TWO',  str(speed_bft[1]))
    output = output.replace('BFT_THREE',str(speed_bft[2]))
