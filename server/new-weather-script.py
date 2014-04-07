@@ -208,10 +208,10 @@ else:
    output = output.replace('WIND_TWO'  ,wind_icon[1])  
    output = output.replace('WIND_THREE',wind_icon[2])  
    output = output.replace('WIND_FOUR' ,wind_icon[3])  
-   output = output.replace('BFT_ONE',  str(speed_bft[0]))
-   output = output.replace('BFT_TWO',  str(speed_bft[1]))
+   output = output.replace('BFT_ONE'  ,str(speed_bft[0]))
+   output = output.replace('BFT_TWO'  ,str(speed_bft[1]))
    output = output.replace('BFT_THREE',str(speed_bft[2]))
-   output = output.replace('BFT_FOUR', str(speed_bft[3]))
+   output = output.replace('BFT_FOUR' ,str(speed_bft[3]))
 
    
 
