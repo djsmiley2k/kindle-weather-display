@@ -175,8 +175,10 @@ for period in periods:
           break;
 
     # pad the string so they centre on the icon when printed
+    # bug (?) with imagemagick convert 6.3.7 
+    #  - works fine with 6.6.0 - the padding on the smaller 3 icons is messed up
     speed_bft[i] = str(bft)
-    if bft < 10 :
+    if i== 0 and bft < 10 :
        speed_bft[i] = speed_bft[i]+" "
     print "      Wind    :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]+"<<<"
      
