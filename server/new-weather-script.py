@@ -148,7 +148,7 @@ highs = [None]*7
 feels = [None]*7
 icons     =  [None]*7
 wind_icon =  [None]*7 
-speed_bft =  [None]*7 
+speed_bft =  [""]*7 
 
 i=0
 for period in periods:
@@ -170,10 +170,15 @@ for period in periods:
     speed_mph = int(Reps[0].getAttribute('S'))
     wind_icon[i] = "wind"+wind_mapping[dir]
 
-    for speed_bft[i], min_mph in enumerate(beaufort_scale):
+    for bft, min_mph in enumerate(beaufort_scale):
        if speed_mph <= min_mph:
           break;
-    print "      Wind    :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]
+
+    # pad the string so they centre on the icon when printed
+    speed_bft[i] = str(bft)
+    if bft < 10 :
+       speed_bft[i] = speed_bft[i]+" "
+    print "      Wind    :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]+"<<<"
      
      # and loop
     i=i+1
@@ -208,10 +213,10 @@ else:
    output = output.replace('WIND_TWO'  ,wind_icon[1])  
    output = output.replace('WIND_THREE',wind_icon[2])  
    output = output.replace('WIND_FOUR' ,wind_icon[3])  
-   output = output.replace('BFT_ONE'  ,str(speed_bft[0]))
-   output = output.replace('BFT_TWO'  ,str(speed_bft[1]))
-   output = output.replace('BFT_THREE',str(speed_bft[2]))
-   output = output.replace('BFT_FOUR' ,str(speed_bft[3]))
+   output = output.replace('BFT_ONE'  ,speed_bft[0])
+   output = output.replace('BFT_TWO'  ,speed_bft[1])
+   output = output.replace('BFT_THREE',speed_bft[2])
+   output = output.replace('BFT_FOUR' ,speed_bft[3])
 
    
 
