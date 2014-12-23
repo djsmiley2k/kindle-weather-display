@@ -1,7 +1,7 @@
 Modified for UK weather - pulled from the Met Office
 
 features:
-   - some new icons (we have more types of rain!) 
+   - some new icons (we have more types of rain) 
    - changed high/low temp to temp/feels like - this is what the MetOffice give us
    - Wind arrows <-- the best bit!
    
