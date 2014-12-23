@@ -10,6 +10,5 @@ Forked from:
 http://www.mpetroff.net/archives/2012/09/14/kindle-weather-display/
 
 
-Example:
 ![Example Screenshot](https://raw.githubusercontent.com/obitoo/kindle-weather-display/master/screenshots/weather-winds.png)
 
