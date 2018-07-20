@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 # Kindle Weather Display
 # Matthew Petroff (http://www.mpetroff.net/)
@@ -17,7 +17,9 @@ import codecs
 #
 # MetOffice API Key - unique to me. Todo - put into file
 #
-myApiKey="7557844e-c57a-4fc6-90d0-055fcce3018c"
+file = open("apikey", "r")
+myApiKey = file.read()
+print "Api key is defined as %s" % myApiKey
 
 
 #
@@ -104,9 +106,11 @@ beaufort_scale = [ 0, 1, 4, 8, 13, 18, 25, 31, 39, 47, 55, 64, 74 ]
 
 
 #
-# Download and parse weather data - location 352448 = Loughton, Essex
+# Download and parse weather data - location 310006 = Coventry
 #
+# Find your own location at: http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/sitelist?key=<apikey>
 url='http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/352448?res=daily&key='+myApiKey
+print "Calling to %s" % url
 weather_xml = urllib2.urlopen(url).read()
 dom = minidom.parseString(weather_xml)
 
