@@ -184,7 +184,7 @@ for period in periods:
     speed_bft[i] = str(bft)
     if i== 0 and bft < 10 :
        speed_bft[i] = speed_bft[i]+" "
-    print "      Wind    :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]+"<<<"
+    print "      Wind     :",dir , speed_mph ,"mph", wind_icon[i], "Force ",speed_bft[i]+"<<<"
      
      # and loop
     i=i+1
