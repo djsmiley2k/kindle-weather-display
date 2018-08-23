@@ -15,11 +15,11 @@ import codecs
 
 
 #
-# MetOffice API Key - unique to me. Todo - put into file
+# MetOffice API Key - Get your own at https://www.metoffice.gov.uk/datapoint/api
 #
 file = open("apikey", "r")
 myApiKey = file.read()
-print "Api key is defined as %s" % myApiKey
+# print "Api key is defined as %s" % myApiKey
 
 
 #
