@@ -3,3 +3,4 @@ server/weather-script-output.png
 server/weather-script-output.svg
 server/weather-script-output_s.png
 calendar/credentials.json
+calendar/token.json
