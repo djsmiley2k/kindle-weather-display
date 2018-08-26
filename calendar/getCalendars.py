@@ -20,31 +20,31 @@ def main():
 
     # Call the Calendar API
     now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-    print('Getting the calendar IDs')
+    print('Getting the upcoming 10 events')
 
-
-    page_token = None
-    while True:
-      calendar_list = service.calendarList().list(pageToken=page_token).execute()
-      for calendar_list_entry in calendar_list['items']:
-        print calendar_list_entry['summary']
-      page_token = calendar_list.get('nextPageToken')
-      if not page_token:
-        break
-
-
-
-
+	# Todo, loopo this for each mail address
     events_result = service.events().list(calendarId='primary', timeMin=now,
                                         maxResults=10, singleEvents=True,
                                         orderBy='startTime').execute()
     events = events_result.get('items', [])
+
+    events_result2 = service.events().list(calendarId='xxx@gmail.com', timeMin=now,
+                                        maxResults=10, singleEvents=True,
+                                        orderBy='startTime').execute()
+    events2 = events_result2.get('items', [])
+
+
 
     if not events:
         print('No upcoming events found.')
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
         print(start, event['summary'])
+
+    for event in events2:
+        start = event['start'].get('dateTime', event['start'].get('date'))
+        print(start, event['summary'])
+
 
 if __name__ == '__main__':
     main()
