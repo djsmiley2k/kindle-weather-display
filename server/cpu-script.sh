@@ -5,8 +5,8 @@ cd "$(dirname "$0")"
 
 date
 
-echo "------ python get data from metoffice"
-python2 new-weather-script.py
+echo "------ Get various statistics and put them into one file"
+cpu-script.py
 
 echo "------ convert to png"
 # Imagemagick has broken, rsvg-convert is what it calls.
