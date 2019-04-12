@@ -5,11 +5,41 @@
 # March 2019
 #
 
+import datetime
+import socket
+import sys
+import time
+import codecs
+from xml.dom import minidom
+
 template = 'cpu-script-preprocess.svg'
 
 #
 # Preprocess SVG
 #
+
+cpu = open('/sys/class/hwmon/hwmon1/device/temp1_input','r')
+for line in cpu:
+	cpu_temp = (float(line) / 1000)
+
+
+nb = open('/sys/class/hwmon/hwmon1/device/temp3_input','r')
+for line in nb:
+	nb_temp = (float(line) / 1000)
+
+#hdd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s.connect((host,port))
+#hdd_temp = s.recv(4096)
+#s.close()
+
+hdd_temp = "test"
+
+load = "100"
+
+uptime = "2"
+
+dtnow=datetime.datetime.now().strftime("%d-%b %H:%M")
+
 
 # Open SVG to process
 output = codecs.open(template , 'r', encoding='utf-8').read()
