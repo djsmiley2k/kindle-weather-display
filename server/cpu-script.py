@@ -36,10 +36,20 @@ hdd_temp = "test"
 
 load = "100"
 
-uptime = "2"
+def colon_split(a):
+    if a.count(":") == 1:
+            return a.split(":")[0]
+    else:
+            return ":".join(a.split(":", 2)[:2])
+
+
+with open('/proc/uptime', 'r') as f:
+    uptime_seconds = float(f.readline().split()[0])
+    uptime_string = str(datetime.timedelta(seconds = uptime_seconds))
+
+uptime = colon_split(uptime_string)
 
 dtnow=datetime.datetime.now().strftime("%d-%b %H:%M")
-
 
 # Open SVG to process
 output = codecs.open(template , 'r', encoding='utf-8').read()
