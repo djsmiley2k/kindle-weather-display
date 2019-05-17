@@ -34,16 +34,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1305"
-     inkscape:window-height="884"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
      id="namedview3201"
      showgrid="true"
      inkscape:zoom="0.945"
      inkscape:cx="531.82138"
-     inkscape:cy="120.18376"
-     inkscape:window-x="2054"
-     inkscape:window-y="47"
-     inkscape:window-maximized="0"
+     inkscape:cy="416.48006"
+     inkscape:window-x="1920"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg3095">
     <inkscape:grid
        type="xygrid"
@@ -152,9 +152,10 @@
        d="m16.221,27.455,0.58054,0.56843,1.7176,21.799,3.5729,3.4978-1.446-19.39,5.6942,5.5746,6.2302,6.0993,0.63216-0.64937,0.04465,0.04372c-7.9695,8.937-7.5825,22.665,1.057,31.123,8.8795,8.693,23.105,8.5225,31.774-0.38093,8.6688-8.9034,8.4979-23.168-0.38165-31.861-8.6395-8.4581-22.335-8.517-31.054-0.31369l-0.04465-0.04372,0.56687-0.58209-6.2302-6.0993-5.7166-5.5965,19.322,0.98544-3.5729-3.4978-21.796-1.2213-0.44655-0.43728,0.02709,0.42012-0.5301-0.0379z" />
   </defs>
   <g
-     id="g3889">
+     id="g3889"
+     transform="translate(9.7566223,1.6401978)">
     <rect
-       style="fill-opacity:1;display:none"
+       style="display:none;fill-opacity:1"
        id="rect4786"
        width="200"
        height="187.30159"
@@ -227,8 +228,8 @@
     <text
        style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
        font-size="100px"
-       y="582.97998"
-       x="504.24561"
+       y="584.97998"
+       x="542.24561"
        id="text3151-75-2">LOAD_V</text>
     <text
        style="font-size:127.47409821px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.27474105"
@@ -293,17 +294,4 @@
        x="318.53906"
        id="text3333">DATE_VALPLACE</text>
   </g>
-  <flowRoot
-     xml:space="preserve"
-     id="flowRoot3874"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:130.27502441px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="matrix(0.73920183,0,0,1.3179531,134.50954,-192.07735)"><flowRegion
-       id="flowRegion3876"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:130.27502441px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"><rect
-         id="rect3878"
-         width="130"
-         height="150"
-         x="510"
-         y="490"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:130.27502441px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
-       id="flowPara3880">%</flowPara></flowRoot></svg>
+</svg>
