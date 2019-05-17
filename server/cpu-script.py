@@ -10,6 +10,7 @@ import socket
 import sys
 import time
 import codecs
+import re
 from xml.dom import minidom
 
 template = 'cpu-script-preprocess.svg'
@@ -48,9 +49,9 @@ with open('/proc/uptime', 'r') as f:
     uptime_string = str(datetime.timedelta(seconds = uptime_seconds))
 
 uptime = colon_split(uptime_string)
-uptime1 = uptime.replace(' ', '\n')
+uptime1 = re.sub(r',\s' , ',\n', uptime)
 
-# print ("uptime is %s" % uptime)
+print ("uptime is %s" % uptime1)
 
 dtnow=datetime.datetime.now().strftime("%d-%b %H:%M")
 

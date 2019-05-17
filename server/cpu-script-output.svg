@@ -166,7 +166,7 @@
        font-size="100px"
        y="126.97331"
        x="523.35443"
-       id="text3151">58.0</text>
+       id="text3151">57.0</text>
     <text
        style="font-size:63.40390396px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;fill:#ffffff"
        font-size="100px"
@@ -218,15 +218,14 @@
        font-size="100px"
        y="430.28223"
        x="531.01306"
-       id="text3151-75-5">63.0</text>
+       id="text3151-75-5">62.0</text>
     <text
        style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
        font-size="100px"
        y="737.27338"
        x="584.71539"
-       id="text3151-75-6">11
-days,
-10:26</text>
+       id="text3151-75-6">11 days,
+11:07</text>
     <text
        style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
        font-size="100px"
@@ -294,6 +293,6 @@ days,
        font-size="12px"
        y="791.12286"
        x="318.53906"
-       id="text3333">17-May 22:20</text>
+       id="text3333">17-May 23:01</text>
   </g>
 </svg>
