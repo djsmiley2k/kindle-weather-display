@@ -62,7 +62,7 @@ output = output.replace('CPU_V',str(cpu_temp))
 output = output.replace('NB_V',str(nb_temp))
 output = output.replace('HDD_V',str(hdd_temp))
 output = output.replace('LOAD_V',str(load))
-output = output.replace('Uptime_V',str(uptime1))
+output = output.replace('UPTIME_V',str(uptime1))
 
 # Insert current time
 # (thanks Jennifer http://www.shatteredhaven.com/2012/11/1347365-kindle-weather-display.html)
