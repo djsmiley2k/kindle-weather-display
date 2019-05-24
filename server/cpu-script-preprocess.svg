@@ -11,7 +11,7 @@
    width="600"
    version="1.1"
    id="svg3095"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="cpu-script-preprocess.svg">
   <metadata
      id="metadata3203">
@@ -223,19 +223,19 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.33200073px;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:1.26650846"
        font-size="100px"
        y="696.0271"
-       x="551.99664"
+       x="586.9751"
        id="text3151-75-6"
        transform="scale(1.0286008,0.97219446)">
       <tspan
          sodipodi:role="line"
          id="tspan446"
-         x="551.99664"
-         y="696.0271">UPTIME_V</tspan>
+         x="586.9751"
+         y="696.0271">UPTIME1_V</tspan>
       <tspan
          sodipodi:role="line"
          id="tspan448"
-         x="551.99664"
-         y="696.0271"></tspan>
+         x="586.9751"
+         y="696.0271" />
     </text>
     <text
        style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
@@ -305,5 +305,23 @@
        y="791.12286"
        x="318.53906"
        id="text3333">DATE_VALPLACE</text>
+    <text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.33200073px;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:1.26650846"
+       font-size="100px"
+       y="743.42981"
+       x="585.27759"
+       id="text3151-75-6-0"
+       transform="scale(1.0286008,0.97219446)">
+      <tspan
+         sodipodi:role="line"
+         id="tspan446-4"
+         x="585.27759"
+         y="743.42981">UPTIME2_V</tspan>
+      <tspan
+         sodipodi:role="line"
+         id="tspan448-8"
+         x="585.27759"
+         y="743.42981" />
+    </text>
   </g>
 </svg>
