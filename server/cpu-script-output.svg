@@ -39,12 +39,12 @@
      id="namedview3201"
      showgrid="true"
      inkscape:zoom="0.945"
-     inkscape:cx="531.82138"
+     inkscape:cx="512.77376"
      inkscape:cy="416.48006"
      inkscape:window-x="1920"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3095">
+     inkscape:current-layer="g3889">
     <inkscape:grid
        type="xygrid"
        id="grid4489" />
@@ -166,7 +166,7 @@
        font-size="100px"
        y="126.97331"
        x="523.35443"
-       id="text3151">57.0</text>
+       id="text3151">35.0</text>
     <text
        style="font-size:63.40390396px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;fill:#ffffff"
        font-size="100px"
@@ -218,14 +218,26 @@
        font-size="100px"
        y="430.28223"
        x="531.01306"
-       id="text3151-75-5">62.0</text>
+       id="text3151-75-5">41.0</text>
     <text
-       style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.33200073px;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:1.26650846"
        font-size="100px"
-       y="737.27338"
-       x="584.71539"
-       id="text3151-75-6">11 days,
-11:07</text>
+       y="696.0271"
+       x="551.99664"
+       id="text3151-75-6"
+       transform="scale(1.0286008,0.97219446)">
+      <tspan
+         sodipodi:role="line"
+         id="tspan446"
+         x="551.99664"
+         y="696.0271">12 days,
+0:09</tspan>
+      <tspan
+         sodipodi:role="line"
+         id="tspan448"
+         x="551.99664"
+         y="696.0271"></tspan>
+    </text>
     <text
        style="font-size:130.27316284px;line-height:0%;font-family:'DejaVu Sans';text-anchor:end;stroke-width:1.30273163"
        font-size="100px"
@@ -293,6 +305,6 @@
        font-size="12px"
        y="791.12286"
        x="318.53906"
-       id="text3333">17-May 23:01</text>
+       id="text3333">18-May 12:03</text>
   </g>
 </svg>

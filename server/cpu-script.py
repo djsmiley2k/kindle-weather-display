@@ -49,9 +49,8 @@ with open('/proc/uptime', 'r') as f:
     uptime_string = str(datetime.timedelta(seconds = uptime_seconds))
 
 uptime = colon_split(uptime_string)
-uptime1 = re.sub(r',\s' , ',\n', uptime)
-
-print ("uptime is %s" % uptime1)
+#uptime1 = re.sub(r',\s' , ',\n', uptime)
+uptime1 = uptime.split(', ')
 
 dtnow=datetime.datetime.now().strftime("%d-%b %H:%M")
 
@@ -62,7 +61,8 @@ output = output.replace('CPU_V',str(cpu_temp))
 output = output.replace('NB_V',str(nb_temp))
 output = output.replace('HDD_V',str(hdd_temp))
 output = output.replace('LOAD_V',str(load))
-output = output.replace('UPTIME_V',str(uptime1))
+output = output.replace('UPTIME1_V',str(uptime1[0]))
+output = output.replace('UPTIME2_V',str(uptime1[1]))
 
 # Insert current time
 # (thanks Jennifer http://www.shatteredhaven.com/2012/11/1347365-kindle-weather-display.html)
